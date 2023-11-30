@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--orange: #e3964a;
+	--gray: #969696;
+	--red: #e34a4a;
+	--white: #fff;
+	--black: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--orange: #e3964a;
+		--gray: #969696;
+		--red: #e34a4a;
+		--black: #fff;
+		--white: #000;
+	}
+}
