@@ -20,7 +20,7 @@
       ]
     ],
     "price": 199,
-    "images": ["assets/images/products/product-220101.jpg"]
+    "images": ["/images/products/product-220101.jpg"]
   },
   {
     "id": 220102,
@@ -43,7 +43,7 @@
       ]
     ],
     "price": 269,
-    "images": ["assets/images/products/product-220102.jpg"]
+    "images": ["/images/products/product-220102.jpg"]
   },
   {
     "id": 220103,
@@ -66,7 +66,7 @@
       ]
     ],
     "price": 79,
-    "images": ["assets/images/products/product-220103.jpg"]
+    "images": ["/images/products/product-220103.jpg"]
   },
   {
     "id": 220104,
@@ -92,7 +92,7 @@
       ]
     ],
     "price": 69,
-    "images": ["assets/images/products/product-220104.jpg"]
+    "images": ["/images/products/product-220104.jpg"]
   },
   {
     "id": 220105,
@@ -115,7 +115,7 @@
       ]
     ],
     "price": 79,
-    "images": ["assets/images/products/product-220105.jpg"]
+    "images": ["/images/products/product-220105.jpg"]
   },
   {
     "id": 220106,
@@ -142,7 +142,7 @@
       ]
     ],
     "price": 139,
-    "images": ["assets/images/products/product-220106.jpg"]
+    "images": ["/images/products/product-220106.jpg"]
   },
   {
     "id": 220107,
@@ -166,7 +166,7 @@
     ],
     "price": 199,
     "discount": 179,
-    "images": ["assets/images/products/product-220107.jpg"]
+    "images": ["/images/products/product-220107.jpg"]
   },
 
   {
@@ -194,7 +194,7 @@
     ],
     "price": 549,
     "discount": 499,
-    "images": ["assets/images/products/product-220201.jpg"]
+    "images": ["/images/products/product-220201.jpg"]
   },
   {
     "id": 220202,
@@ -220,7 +220,7 @@
       ]
     ],
     "price": 599,
-    "images": ["assets/images/products/product-220202.jpg"]
+    "images": ["/images/products/product-220202.jpg"]
   },
   {
     "id": 220203,
@@ -246,7 +246,7 @@
       ]
     ],
     "price": 599,
-    "images": ["assets/images/products/product-220203.jpg"]
+    "images": ["/images/products/product-220203.jpg"]
   },
   {
     "id": 220204,
@@ -272,7 +272,7 @@
       ]
     ],
     "price": 589,
-    "images": ["assets/images/products/product-220204.jpg"]
+    "images": ["/images/products/product-220204.jpg"]
   },
   {
     "id": 220205,
@@ -298,7 +298,7 @@
       ]
     ],
     "price": 329,
-    "images": ["assets/images/products/product-220205.jpg"]
+    "images": ["/images/products/product-220205.jpg"]
   },
   {
     "id": 220206,
@@ -324,7 +324,7 @@
       ]
     ],
     "price": 329,
-    "images": ["assets/images/products/product-220206.jpg"]
+    "images": ["/images/products/product-220206.jpg"]
   },
 
   {
@@ -351,7 +351,7 @@
       ]
     ],
     "price": 139,
-    "images": ["assets/images/products/product-220301.jpg"]
+    "images": ["/images/products/product-220301.jpg"]
   },
   {
     "id": 220302,
@@ -374,7 +374,7 @@
       ]
     ],
     "price": 119,
-    "images": ["assets/images/products/product-220302.jpg"]
+    "images": ["/images/products/product-220302.jpg"]
   },
   {
     "id": 220303,
@@ -397,7 +397,7 @@
       ]
     ],
     "price": 279,
-    "images": ["assets/images/products/product-220303.jpg"]
+    "images": ["/images/products/product-220303.jpg"]
   },
   {
     "id": 220304,
@@ -420,6 +420,6 @@
       ]
     ],
     "price": 709,
-    "images": ["assets/images/products/product-220304.jpg"]
+    "images": ["/images/products/product-220304.jpg"]
   }
 ]

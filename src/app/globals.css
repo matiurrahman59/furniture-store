@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 :root {
-	--orange: #e3964a;
-	--gray: #969696;
-	--red: #e34a4a;
-	--white: #fff;
-	--black: #000;
+  --orange: 227, 150, 74;
+  --orange--alpha: 238, 219, 201;
+  --gray: 150, 150, 150;
+  --red: 227, 74, 74;
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--orange: #e3964a;
-		--gray: #969696;
-		--red: #e34a4a;
-		--black: #fff;
-		--white: #000;
-	}
+  :root {
+    --orange: 227, 150, 74;
+    --gray: 150, 150, 150;
+    --red: 227, 74, 74;
+    --black: 255, 255, 255;
+    --white: 0, 0, 0;
+  }
 }
