@@ -2,38 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type item = {
-  id: number;
-  name: string;
-  popularity: number;
-  category: { id: number; name: string };
-  rooms: { id: number; name: string }[];
-  info: string[][];
-  price: number;
-  images: string[];
-  discount?: number;
-};
+import { productItem } from "@/utils/types";
 
-export default function ProductCard({ item }: { item: item }) {
+export default function ProductCard({ item }: { item: productItem }) {
   return (
     <Link href="/">
-      <div className="bg-gray/10 overflow-hidden rounded-2xl transition-transform hover:-translate-y-1">
+      <div className="hover-effect rounded-2xl bg-gray/10">
         {/* product image container */}
-        <div className="relative h-[171px] w-full xl:h-[276px]">
+        <div className="relative flex h-[171px] w-full items-end justify-end xl:h-[276px]">
           <Image
             src={item.images[0]}
             alt={`Popular product ${item.id}`}
             fill
-            className="rounded-b-2xl object-cover"
+            className="rounded-2xl object-cover"
           />
-          <div className="bg-orangeAlpha absolute bottom-2 right-2 grid h-12 w-12 place-content-center rounded-lg">
-            <button className="text-2xl text-orange ">+</button>
-          </div>
+          <button className="tooltip relative mb-2 mr-2 grid h-12 w-12 place-content-center rounded-lg bg-orangeAlpha text-2xl text-orange xl:mb-6 xl:mr-6">
+            +
+          </button>
         </div>
 
         {/* product details container*/}
         <div className="p-4 xl:p-6">
-          <p className="text-xs font-semibold uppercase text-gray">
+          <p className="tooltip text-xs font-semibold uppercase text-gray">
             {item.category.name}
           </p>
           <p className="capitalize text-black">{item.name}</p>

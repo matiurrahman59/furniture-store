@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .section-padding {
+    @apply p-4 xl:p-6;
+  }
+
+  .hover-effect {
+    @apply transition-transform hover:-translate-y-1;
+  }
+
+  .tooltip {
+    @apply before:absolute before:-bottom-2 before:left-1/2 before:w-max before:origin-top before:-translate-x-1/2 before:translate-y-full before:scale-0 before:whitespace-nowrap before:rounded-md before:bg-black/75 before:px-2 before:py-1 before:text-sm before:text-white before:transition-all before:duration-75 before:content-['Add_to_cart'] hover:before:scale-100;
+  }
+}
+
 :root {
   --orange: 227, 150, 74;
   --orange--alpha: 238, 219, 201;
