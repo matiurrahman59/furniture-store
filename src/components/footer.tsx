@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div className="row-span-2 text-gray">
-          <p>© Instor 2022</p>
+          <p>© Instor 2024</p>
         </div>
 
         <div className="row-span-2 text-gray">

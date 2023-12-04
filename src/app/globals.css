@@ -34,3 +34,7 @@
     --white: 0, 0, 0;
   }
 }
+
+.splide__pagination__page .is-active {
+  background: var(--black) !;
+}

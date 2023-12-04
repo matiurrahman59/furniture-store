@@ -7,6 +7,7 @@ import roomsData from "../assets/json/rooms.json";
 
 import ProductContainer from "@/components/productContainer";
 import SectionHeading from "@/components/sectionHeading";
+import Banner from "@/components/banner";
 
 export default function Home() {
   const popularProductsData = productsData
@@ -20,6 +21,8 @@ export default function Home() {
         <br />
         Your Home Needs
       </h1>
+
+      <Banner />
 
       {/* Categories section */}
       <section className="py-4 xl:py-6">

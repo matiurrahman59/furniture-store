@@ -23,7 +23,7 @@ export default function ProductCard({ item }: { item: productItem }) {
 
         {/* product details container*/}
         <div className="p-4 xl:p-6">
-          <p className="tooltip text-xs font-semibold uppercase text-gray">
+          <p className="text-xs font-semibold uppercase text-gray">
             {item.category.name}
           </p>
           <p className="capitalize text-black">{item.name}</p>
