@@ -9,12 +9,13 @@ export default function ProductCard({ item }: { item: productItem }) {
     <Link href="/">
       <div className="hover-effect rounded-2xl bg-gray/10">
         {/* product image container */}
-        <div className="relative flex h-[171px] w-full items-end justify-end xl:h-[276px]">
+        <div className="relative flex h-[171px] w-full items-end justify-end md:h-52 xl:h-[276px]">
           <Image
             src={item.images[0]}
             alt={`Popular product ${item.id}`}
             fill
             className="rounded-2xl object-cover"
+            sizes="(min-width: 1280px) 276px, calc(46.88vw - 15px)"
           />
           <button className="tooltip relative mb-2 mr-2 grid h-12 w-12 place-content-center rounded-lg bg-orangeAlpha text-2xl text-orange xl:mb-6 xl:mr-6">
             +

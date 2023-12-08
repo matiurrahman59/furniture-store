@@ -4,7 +4,7 @@
 
 @layer components {
   .section-padding {
-    @apply p-4 xl:p-6;
+    @apply p-4 md:px-0;
   }
 
   .hover-effect {
@@ -33,8 +33,4 @@
     --black: 255, 255, 255;
     --white: 0, 0, 0;
   }
-}
-
-.splide__pagination__page .is-active {
-  background: var(--black) !;
 }

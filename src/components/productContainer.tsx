@@ -8,7 +8,7 @@ export default function ProductContainer({
   products: productItem[];
 }) {
   return (
-    <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
       {products.map((item: productItem, i) => (
         <ProductCard item={item} key={i} />
       ))}

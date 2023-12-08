@@ -11,7 +11,7 @@ export default function Footer() {
   const [enabled, setEnabled] = useState(false);
 
   return (
-    <footer className="px-4 py-8">
+    <footer className="px-4 pb-20 pt-4 md:px-0 md:py-8 ">
       <div className="grid grid-cols-2 grid-rows-2 xl:flex xl:justify-between">
         <div className="col-span-3 pb-8">
           <div className="flex justify-center gap-8">

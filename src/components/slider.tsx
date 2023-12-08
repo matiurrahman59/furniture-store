@@ -22,6 +22,7 @@ export default function Slider({
       slides: {
         spacing: 15,
       },
+      initial: 0,
     },
     [
       (slider) => {
@@ -56,14 +57,14 @@ export default function Slider({
   );
 
   return (
-    <div ref={sliderRef} className="keen-slider relative">
+    <div ref={sliderRef} className="keen-slider relative rounded-2xl">
       {children}
       {/* slider dots */}
       <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1">
         {Array.from({ length: items }, (_, index) => (
           <div
             key={index}
-            className={`h-1 w-1 rounded-full xl:h-2 xl:w-2 ${
+            className={`h-1 w-1  rounded-full xl:h-2 xl:w-2 ${
               index === currentSlide ? "bg-black" : "bg-black/30"
             }`}
           />
