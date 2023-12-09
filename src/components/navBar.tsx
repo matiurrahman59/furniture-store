@@ -45,7 +45,7 @@ export default function NavBar() {
       </div>
 
       {/* Search input for small screen */}
-      <div className="hidden sm:block lg:hidden">
+      <div className="hidden sm:block sm:px-4 md:px-0 lg:hidden">
         <SearchBox />
       </div>
 

@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="section-padding text-2xl font-bold leading-9 text-black sm:text-center md:text-3xl xl:text-5xl xl:leading-[72px]">
+      <h1 className="section-padding text-2xl font-bold leading-9 text-black md:text-3xl lg:text-center xl:text-5xl xl:leading-[72px]">
         Explore What
         <br />
         Your Home Needs
@@ -26,12 +26,12 @@ export default function Home() {
       {/* Categories Section */}
       <section className="section-padding">
         <SectionHeading title="Categories" />
-        <div className="flex gap-4 overflow-x-scroll pt-4 sm:grid sm:grid-cols-3 xl:py-5">
+        <div className="no-scrollbar flex snap-x gap-4 overflow-x-auto pt-4 sm:grid sm:grid-cols-3 xl:py-5">
           {categoriesData.map((item) => (
             <Link
-              href="/"
+              href={`/category/${item.name}`}
               key={item.id}
-              className="hover-effect relative h-[75px] min-w-[150px] sm:h-32 xl:h-[184px]"
+              className="hover-effect relative h-[75px] min-w-[150px] snap-end sm:h-32 xl:h-[184px]"
             >
               <Image
                 src={item.image}
@@ -97,11 +97,11 @@ export default function Home() {
           <SectionHeading title="Rooms" />
           <p className="text-gray">Furniture for every corners in your home</p>
         </div>
-        <div className="flex gap-4 overflow-x-scroll pt-4 lg:grid lg:grid-cols-4">
+        <div className="no-scrollbar flex snap-x gap-4 overflow-x-auto pt-4 lg:grid lg:grid-cols-4">
           {roomsData.map((item) => (
             <Link
-              href="/"
-              className="hover-effect relative h-[270px] min-w-[180px] overflow-hidden rounded-2xl lg:h-80 lg:w-auto xl:h-[396px]"
+              href={`/room/${item.id}`}
+              className="hover-effect relative h-[270px] min-w-[180px] snap-end overflow-hidden rounded-2xl lg:h-80 lg:w-auto xl:h-[396px]"
               key={item.id}
             >
               <Image

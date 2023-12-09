@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${mainFont.variable} bg-white font-sans`}>
+      <body className={`${mainFont.variable} min-h-screen bg-white font-sans`}>
         <NavBar />
         <div className="mx-auto w-full max-w-[1200px] md:w-11/12 xl:w-full">
           <main>{children}</main>

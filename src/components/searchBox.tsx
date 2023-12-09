@@ -21,12 +21,15 @@ export default function SearchBox() {
 
   return (
     <form
-      className={`"group mx-4 flex items-center rounded-md border-2 px-2 focus-within:border-orange ${
+      className={`"group flex items-center rounded-md border-2 px-2 focus-within:border-orange ${
         focus ? "border-orange" : "border-gray/25 hover:border-orange/30"
       }`}
       onSubmit={onSubmit}
+      onClick={() => inputRef.current?.focus()}
     >
-      <MagnifyingGlassIcon className="h-6 w-6 text-gray/80" />
+      <div className="pointer-events-none">
+        <MagnifyingGlassIcon className="h-6 w-6 text-gray/80" />
+      </div>
       <input
         ref={inputRef}
         type="text"
