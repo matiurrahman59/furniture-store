@@ -1,4 +1,3 @@
-"use client";
 import { FC } from "react";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
@@ -18,12 +17,10 @@ interface RoomProps {
 const Room: FC<RoomProps> = ({ params }) => {
   const { roomId } = params;
   const filteredRoom = roomsData.filter((item) => item.id === +roomId);
-  console.log(filteredRoom);
 
   if (!filteredRoom.length) return null;
 
   const room = filteredRoom[0];
-
   const product = products.filter((item) => item.rooms[0].id === +roomId);
 
   return (

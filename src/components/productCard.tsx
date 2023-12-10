@@ -6,7 +6,7 @@ import { productItem } from "@/utils/types";
 
 export default function ProductCard({ item }: { item: productItem }) {
   return (
-    <Link href="/">
+    <Link href={`/product/${item.id}`}>
       <div className="hover-effect rounded-2xl bg-gray/10">
         {/* product image container */}
         <div className="relative flex h-[171px] w-full items-end justify-end md:h-52 xl:h-[276px]">

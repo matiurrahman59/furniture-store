@@ -13,7 +13,7 @@ export default function NavBar() {
 
   return (
     <div className="mx-auto w-full max-w-[1200px] md:w-11/12 xl:w-full">
-      <div className="flex items-center justify-between px-4 py-8 md:px-0 lg:gap-8">
+      <div className="flex items-center justify-between px-4 pb-4 pt-8 md:px-0 lg:gap-8">
         {/* Header Logo */}
         <Link href="/">
           <Image
