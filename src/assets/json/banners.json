@@ -3,18 +3,18 @@
     "image": "/images/banner/banner-1.jpg",
     "heading": "30% off",
     "text": "High quality sofa",
-    "to": "/category/2"
+    "to": "/category/sofas"
   },
   {
     "image": "/images/banner/banner-2.jpg",
     "heading": "Sale",
     "text": "All chairs up to 50% off",
-    "to": "/category/1"
+    "to": "/category/chairs"
   },
   {
     "image": "/images/banner/banner-1.jpg",
     "heading": "Sale",
     "text": "All sofas up to 30% off",
-    "to": "/category/2"
+    "to": "/category/desks"
   }
 ]

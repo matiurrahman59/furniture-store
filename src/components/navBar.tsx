@@ -32,10 +32,10 @@ export default function NavBar() {
         {/* Header right content */}
         <div className="hidden items-center gap-2 sm:flex">
           <div className="flex items-center gap-2">
-            <button className="flex items-center gap-2 rounded-lg bg-orangeAlpha/80 p-3 text-orange transition-colors hover:bg-orangeAlpha">
+            <Link href="/cart" className="btn-primary flex gap-2 p-3">
               <ShoppingCartIcon className="h-6 w-6" />
               <span>Cart</span>
-            </button>
+            </Link>
           </div>
 
           <button className="rounded-lg bg-black p-3 text-white transition-colors hover:bg-black/75">

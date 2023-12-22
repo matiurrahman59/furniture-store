@@ -7,12 +7,16 @@
     @apply p-4 md:px-0;
   }
 
+  .btn-primary {
+    @apply rounded-lg bg-orangeAlpha/90 text-orange transition-colors hover:bg-orangeAlpha;
+  }
+
   .hover-effect {
     @apply transition-transform hover:-translate-y-1;
   }
 
   .tooltip {
-    @apply before:absolute before:-bottom-2 before:left-1/2 before:w-max before:origin-top before:-translate-x-1/2 before:translate-y-full before:scale-0 before:whitespace-nowrap before:rounded-md before:bg-black/75 before:px-2 before:py-1 before:text-sm before:text-white before:transition-all before:duration-75 before:content-['Add_to_cart'] hover:before:scale-100;
+    @apply relative before:absolute before:-bottom-2 before:left-1/2 before:w-max before:origin-top before:-translate-x-1/2 before:translate-y-full before:scale-0 before:whitespace-nowrap before:rounded-md before:bg-black/75 before:px-2 before:py-1 before:text-sm before:text-white before:transition-all before:duration-75 before:content-['Add_to_cart'] hover:before:scale-100;
   }
 }
 

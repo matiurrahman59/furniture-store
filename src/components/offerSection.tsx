@@ -1,6 +1,6 @@
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function OfferSection() {
   return (
@@ -22,9 +22,9 @@ export default function OfferSection() {
               </h1>
               <p>All chairs up to</p>
               <p className="font-semibold md:text-xl lg:text-2xl">50% off</p>
-              <div className="hidden sm:block">
-                <p>Learn more &rarr;</p>
-              </div>
+              <p className="hidden items-center gap-2 sm:flex">
+                Learn more <ArrowRightIcon className="h-4 w-4" />
+              </p>
             </div>
           </div>
         </div>

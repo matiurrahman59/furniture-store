@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import { productItem } from "@/utils/types";
+import { PlusIcon } from "@heroicons/react/24/solid";
 
 export default function ProductCard({ item }: { item: productItem }) {
   return (
@@ -17,25 +18,28 @@ export default function ProductCard({ item }: { item: productItem }) {
             className="rounded-2xl object-cover"
             sizes="(min-width: 1280px) 276px, calc(46.88vw - 15px)"
           />
-          <button className="tooltip relative mb-2 mr-2 grid h-12 w-12 place-content-center rounded-lg bg-orangeAlpha text-2xl text-orange xl:mb-6 xl:mr-6">
-            +
-          </button>
         </div>
 
         {/* product details container*/}
-        <div className="p-4 xl:p-6">
-          <p className="text-xs font-semibold uppercase text-gray">
-            {item.category.name}
-          </p>
-          <p className="capitalize text-black">{item.name}</p>
-          {item.discount ? (
-            <div className="flex items-center gap-[10px]">
-              <p className="text-gray line-through">${item.price}</p>
-              <p className="font-semibold text-red">${item.discount}</p>
-            </div>
-          ) : (
-            <p className="text-gray">${item.price}</p>
-          )}
+        <div className="flex items-center justify-between p-4 xl:p-6">
+          <div className="">
+            <p className="text-xs font-semibold uppercase text-gray">
+              {item.category.name}
+            </p>
+            <p className="capitalize text-black">{item.name}</p>
+            {item.discount ? (
+              <div className="flex items-center gap-[10px]">
+                <p className="text-gray line-through">${item.price}</p>
+                <p className="font-semibold text-red">${item.discount}</p>
+              </div>
+            ) : (
+              <p className="text-gray">${item.price}</p>
+            )}
+          </div>
+
+          <button className="tooltip btn-primary p-3 text-2xl">
+            <PlusIcon className="h-6 w-6" />
+          </button>
         </div>
       </div>
     </Link>

@@ -1,17 +1,34 @@
 import {
-  ArrowSmallRightIcon,
+  ChevronRightIcon,
   MagnifyingGlassIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+
+import ArrowButton from "./arrowButton";
 
 export default function SearchBox() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const [focus, setFocus] = useState<boolean>(false);
   const [search, setSearch] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
+
+  // whenever navigating to home page, clear search field
+  useEffect(() => {
+    if (pathname === "/") {
+      setSearch("");
+      inputRef.current?.blur();
+    }
+  }, [pathname]);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    inputRef.current?.blur();
+    router.push(`/search?query=${search}`);
+    setSearch("");
   };
 
   const clearSearchInput = () => {
@@ -42,12 +59,12 @@ export default function SearchBox() {
       />
       {search.length >= 1 && (
         <div className="flex items-center gap-1 self-stretch ">
-          <button onClick={clearSearchInput}>
+          <button type="button" onClick={clearSearchInput}>
             <XMarkIcon className="h-6 w-6 text-gray/80 transition-colors hover:text-orangeAlpha" />
           </button>
-          <button className="my-auto h-3/4 self-stretch rounded-md bg-gray/20 px-1 transition-colors hover:bg-gray/40">
-            <ArrowSmallRightIcon className="h-6 w-6" />
-          </button>
+          <ArrowButton type="submit">
+            <ChevronRightIcon className="h-6 w-6" />
+          </ArrowButton>
         </div>
       )}
     </form>

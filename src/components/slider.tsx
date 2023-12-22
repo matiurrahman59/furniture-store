@@ -1,16 +1,17 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
-export default function Slider({
-  children,
-  items,
-}: {
+import ArrowButton from "./arrowButton";
+
+interface SliderProps {
   children: React.ReactNode;
   items: number;
-}) {
+}
+
+const Slider: FC<SliderProps> = ({ children, items }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
@@ -56,6 +57,13 @@ export default function Slider({
     ],
   );
 
+  const slideLeft = () => {
+    instanceRef.current?.prev();
+  };
+  const slideRight = () => {
+    instanceRef.current?.next();
+  };
+
   return (
     <div ref={sliderRef} className="keen-slider relative rounded-2xl">
       {children}
@@ -71,53 +79,21 @@ export default function Slider({
         ))}
       </div>
 
-      <div className="absolute inset-0 z-10 hidden items-center justify-between xl:flex">
-        {/* slider left arrow*/}
-        <button
-          onClick={(e: any) =>
-            e.stopPropagation() || instanceRef.current?.prev()
-          }
-          className="ml-2.5 rounded-lg bg-black/20 p-2 transition-colors hover:bg-black/40"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6 text-black"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
+      <ArrowButton
+        onClick={slideLeft}
+        buttonStyle="hidden xl:flex left-3 z-10 absolute top-1/2 -translate-y-1/2"
+      >
+        <ChevronLeftIcon className="h-6 w-6" />
+      </ArrowButton>
 
-        {/* slider right arrow*/}
-        <button
-          onClick={(e: any) =>
-            e.stopPropagation() || instanceRef.current?.next()
-          }
-          className="mr-2.5 rounded-lg bg-black/20 p-2 transition-colors hover:bg-black/40"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </button>
-      </div>
+      <ArrowButton
+        onClick={slideRight}
+        buttonStyle="hidden xl:flex z-10 right-3 absolute top-1/2 -translate-y-1/2"
+      >
+        <ChevronRightIcon className="h-6 w-6" />
+      </ArrowButton>
     </div>
   );
-}
+};
+
+export default Slider;

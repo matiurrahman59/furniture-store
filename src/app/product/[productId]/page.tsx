@@ -1,7 +1,5 @@
 "use client";
 import { FC, useState } from "react";
-
-import products from "../../../assets/json/products.json";
 import Image from "next/image";
 import {
   ArrowLeftIcon,
@@ -10,8 +8,12 @@ import {
   ShareIcon,
   StarIcon,
 } from "@heroicons/react/24/solid";
-import { reviewImages } from "@/assets/constants/navLink";
 import Link from "next/link";
+
+import products from "../../../assets/json/products.json";
+import { reviewImages } from "@/assets/constants/navLink";
+import PopularSection from "@/components/popularSection";
+import { useRouter } from "next/navigation";
 
 interface ProductProps {
   params: {
@@ -23,6 +25,7 @@ const Product: FC<ProductProps> = ({ params }) => {
   const [tab, setTab] = useState<number>(0);
   const { productId } = params;
   const filteredProduct = products.filter((item) => item.id === +productId);
+  const router = useRouter();
 
   if (!filteredProduct.length) return null;
 
@@ -49,15 +52,15 @@ const Product: FC<ProductProps> = ({ params }) => {
               className="-z-10 object-cover"
             />
             <div className="flex justify-between p-6">
-              <Link
-                href="/"
-                className="rounded-lg bg-black/40 p-3 backdrop-blur-sm"
+              <button
+                onClick={() => router.back()}
+                className="rounded-lg bg-black/25 p-3 backdrop-blur-sm transition-colors hover:bg-black/30"
               >
                 <ArrowLeftIcon className="h-6 w-6" />
-              </Link>
+              </button>
               <Link
                 href=""
-                className="rounded-lg bg-black/40 p-3 backdrop-blur-sm"
+                className="rounded-lg bg-black/25 p-3 backdrop-blur-sm transition-colors hover:bg-black/30"
               >
                 <ShareIcon className="h-6 w-6" />
               </Link>
@@ -147,6 +150,7 @@ const Product: FC<ProductProps> = ({ params }) => {
           </div>
         </div>
       </div>
+      <PopularSection title="Similar products" />
     </section>
   );
 };
