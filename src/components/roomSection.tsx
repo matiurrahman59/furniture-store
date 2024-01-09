@@ -6,7 +6,7 @@ import roomsData from "../assets/json/rooms.json";
 
 export default function RoomSection() {
   return (
-    <section className="section-padding">
+    <section>
       <div>
         <SectionHeading title="Rooms" />
         <p className="text-gray">Furniture for every corners in your home</p>

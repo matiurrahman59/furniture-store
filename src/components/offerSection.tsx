@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function OfferSection() {
   return (
-    <section className="section-padding">
+    <section>
       <Link href="/">
         <div className="hover-effect relative h-32 overflow-hidden rounded-2xl sm:h-44 lg:h-64">
           <Image

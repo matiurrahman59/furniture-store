@@ -1,6 +1,4 @@
 import { FC } from "react";
-import Link from "next/link";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 import roomsData from "../../../assets/json/rooms.json";
 import products from "../../../assets/json/products.json";
@@ -25,12 +23,9 @@ const Room: FC<RoomProps> = ({ params }) => {
   const product = products.filter((item) => item.rooms[0].id === +roomId);
 
   return (
-    <section>
+    <section className="section-padding">
       <SectionBanner name={room.name} description={room.description} />
-
-      <div className="section-padding">
-        <ProductContainer products={product} />
-      </div>
+      <ProductContainer products={product} />
       <OfferSection />
     </section>
   );

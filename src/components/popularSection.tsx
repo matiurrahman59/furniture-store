@@ -11,7 +11,7 @@ export default function PopularSection({ title }: { title: string }) {
     .slice(0, 4);
 
   return (
-    <section className="section-padding">
+    <section>
       <SectionHeading title={title}>
         <Link href="" className="flex items-center gap-1 text-orange">
           See all

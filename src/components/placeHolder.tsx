@@ -11,7 +11,7 @@ interface PlaceHolderProps {
 
 const PlaceHolder: FC<PlaceHolderProps> = ({ heading, description, icon }) => {
   return (
-    <div className="section-padding mx-auto max-w-[304px] text-center">
+    <div className="mx-auto max-w-[304px] text-center">
       <div className="grid place-content-center">{icon}</div>
       <h2 className="mt-4 text-xl font-semibold capitalize">{heading}</h2>
       <p className="text-gray">{description}</p>

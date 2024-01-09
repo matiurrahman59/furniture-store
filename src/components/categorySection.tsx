@@ -6,7 +6,7 @@ import categoriesData from "../assets/json/categories.json";
 
 export default function CategorySection() {
   return (
-    <section className="section-padding">
+    <section>
       <SectionHeading title="Categories" />
       <div className="no-scrollbar flex snap-x gap-4 overflow-x-auto pt-4 sm:grid sm:grid-cols-3 xl:py-5">
         {categoriesData.map((item) => (

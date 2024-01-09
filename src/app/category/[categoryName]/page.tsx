@@ -29,9 +29,8 @@ const Category: FC<CategoryProps> = ({ params }) => {
   );
 
   return (
-    <section>
+    <section className="section-padding">
       {/* Section banner image */}
-      <div className="section-padding">
         <div className="relative flex h-24 items-center gap-3 overflow-hidden rounded-2xl text-white sm:h-36 lg:h-[168px]">
           <Link
             href="/"
@@ -45,14 +44,11 @@ const Category: FC<CategoryProps> = ({ params }) => {
             alt="Category image"
             fill
             className="-z-10 object-cover"
+            sizes="(min-width: 1320px) 1200px, 93.2vw"
           />
         </div>
-      </div>
 
-      <div className="section-padding">
-        <ProductContainer products={product} />
-      </div>
-
+      <ProductContainer products={product} />
       <OfferSection />
     </section>
   );

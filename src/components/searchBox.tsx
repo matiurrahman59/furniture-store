@@ -51,7 +51,7 @@ export default function SearchBox() {
         ref={inputRef}
         type="text"
         placeholder="What are you looking for?"
-        className="flex-1 rounded-lg border-none p-3 outline-none"
+        className="md:w-3/4 rounded-lg border-none p-3 outline-none"
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
         onChange={(e) => setSearch(e.target.value)}

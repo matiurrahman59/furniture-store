@@ -6,7 +6,7 @@ import Slider from "./slider";
 
 export default function BannerCarousel() {
   return (
-    <div className="section-padding">
+    <div>
       <Slider items={banners.length}>
         {banners.map((item, index) => (
           <Link

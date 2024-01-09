@@ -4,7 +4,7 @@
 
 @layer components {
   .section-padding {
-    @apply p-4 md:px-0;
+    @apply space-y-8;
   }
 
   .btn-primary {

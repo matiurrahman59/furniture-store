@@ -1,6 +1,6 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { FC } from "react";
+import { FC } from "react"
 
 interface SectionBannerProps {
   name: string;
@@ -9,7 +9,7 @@ interface SectionBannerProps {
 
 const SectionBanner: FC<SectionBannerProps> = ({ name, description }) => {
   return (
-    <div className="section-padding">
+    <div>
       <div className="relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gray/10 p-6 text-black md:p-8 lg:gap-6 lg:p-12">
         <Link href="/" className="rounded-lg bg-gray/25 p-3 hover:bg-gray/40">
           <ArrowLeftIcon className="h-6 w-6" />

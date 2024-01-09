@@ -21,8 +21,8 @@ export default function ProductCard({ item }: { item: productItem }) {
         </div>
 
         {/* product details container*/}
-        <div className="flex items-center justify-between p-4 xl:p-6">
-          <div className="">
+        <div className="flex items-center justify-between p-2 xl:p-6">
+          <div>
             <p className="text-xs font-semibold uppercase text-gray">
               {item.category.name}
             </p>

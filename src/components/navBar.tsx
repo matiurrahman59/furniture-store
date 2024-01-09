@@ -12,8 +12,9 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <div className="mx-auto w-full max-w-[1200px] md:w-11/12 xl:w-full">
-      <div className="flex items-center justify-between px-4 pb-4 pt-8 md:px-0 lg:gap-8">
+    <div className="md:sticky md:top-0 md:z-[9999] bg-white w-full">
+    <div>
+      <div className="flex items-center justify-between p-4 lg:py-6 md:px-0 gap-5 lg:gap-8">
         {/* Header Logo */}
         <Link href="/">
           <Image
@@ -25,9 +26,9 @@ export default function NavBar() {
         </Link>
 
         {/* Search input for large devices*/}
-        <div className="hidden flex-1 lg:block">
+        {/* <div className="hidden xl:flex-1 md:w-3/4 md:block">
           <SearchBox />
-        </div>
+        </div> */}
 
         {/* Header right content */}
         <div className="hidden items-center gap-2 sm:flex">
@@ -45,7 +46,7 @@ export default function NavBar() {
       </div>
 
       {/* Search input for small screen */}
-      <div className="hidden sm:block sm:px-4 md:px-0 lg:hidden">
+      <div className="hidden sm:block sm:px-4 md:px-0 md:hidden">
         <SearchBox />
       </div>
 
@@ -74,5 +75,7 @@ export default function NavBar() {
         </div>
       </div>
     </div>
+    </div>
+
   );
 }

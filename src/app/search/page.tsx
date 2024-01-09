@@ -48,7 +48,7 @@ const Search = ({}) => {
   }, [searchParams, fuse, query]);
 
   return (
-    <section>
+    <section className="section-padding">
       <SectionBanner
         name="Search"
         description={
@@ -69,9 +69,7 @@ const Search = ({}) => {
 
       {/* if search results found */}
       {searchProductsData.length > 0 && (
-        <div className="section-padding">
           <ProductContainer products={searchProductsData} />
-        </div>
       )}
 
       {/* if theres query but search result not found */}

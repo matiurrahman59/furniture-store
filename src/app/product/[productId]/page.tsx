@@ -40,8 +40,7 @@ const Product: FC<ProductProps> = ({ params }) => {
   });
 
   return (
-    <section>
-      <div className="section-padding">
+    <section className="section-padding">
         <div className="gap-6 md:flex">
           {/* Product image container */}
           <div className="relative h-[358px] overflow-hidden rounded-2xl text-white md:aspect-square md:h-72 md:w-72 xl:h-[437px] xl:w-[450px]">
@@ -50,6 +49,7 @@ const Product: FC<ProductProps> = ({ params }) => {
               alt={`${product.name} product images`}
               fill
               className="-z-10 object-cover"
+              sizes="(min-width: 1280px) 450px, (min-width: 900px) 288px, (min-width: 780px) calc(18vw + 130px), calc(100vw - 32px)"
             />
             <div className="flex justify-between p-6">
               <button
@@ -149,7 +149,6 @@ const Product: FC<ProductProps> = ({ params }) => {
             </div>
           </div>
         </div>
-      </div>
       <PopularSection title="Similar products" />
     </section>
   );
